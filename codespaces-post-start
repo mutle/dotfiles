@@ -1,4 +1,3 @@
 #!/bin/sh
 # Run by github/github codespaces after starting
 
-./install.sh
