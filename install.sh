@@ -31,8 +31,8 @@ function vimclone {
 }
 
 
-brewget "ag"
-brewget "tmux"
+# brewget "ag"
+# brewget "tmux"
 
 mkdir -p "$vim_path"
 if [ ! -s ~/.vim/vimrc ]; then
