@@ -4,6 +4,10 @@ set -e
 vim_path="$HOME/.vim/pack/plugins/start"
 dotfiles_root=$(pwd)
 
+if [ ! -s ~/.tmux.conf ]; then
+  rm -rf ~/.tmux.conf && ln -s $dotfiles_root/tmux.conf ~/.tmux.conf
+fi
+
 if [ ! -s ~/.zshrc ]; then
   rm -rf ~/.zshrc && ln -s $dotfiles_root/zshrc ~/.zshrc
 fi
