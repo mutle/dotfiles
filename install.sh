@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+exec > >(tee -i $HOME/.dotfiles_install.log)
+exec 2>&1
+set -x
+
 vim_path="$HOME/.vim/pack/plugins/start"
 dotfiles_root=$(pwd)
 
