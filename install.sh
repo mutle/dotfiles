@@ -16,7 +16,7 @@ if [ ! -s ~/.zshrc ]; then
   rm -rf ~/.zshrc && ln -s $dotfiles_root/zshrc ~/.zshrc
 fi
 
-if [ ! -d ~/.oh-my-zsh/lib ]; then
+if [ -d ~/.oh-my-zsh/lib ]; then
   cp $dotfiles_root/editor.zsh ~/.oh-my-zsh/lib/
 fi
 
