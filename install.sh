@@ -25,10 +25,12 @@ if [ ! -s ~/.ctags.d ]; then
 fi
 
 function brewget {
-  if brew ls --versions "$1"; then
-    brew upgrade "$1"
-  else
-    brew install "$1"
+  if [ "$(uname -s)" = "Darwin" ]; then
+    if brew ls --versions "$1"; then
+      brew upgrade "$1"
+    else
+      brew install "$1"
+    fi
   fi
 }
 
@@ -42,9 +44,7 @@ function vimclone {
   fi
 }
 
-
-# brewget "ag"
-# brewget "tmux"
+brewget "tmux"
 
 mkdir -p "$vim_path"
 if [ ! -s ~/.vim/vimrc ]; then
