@@ -11,7 +11,7 @@ set autoread
 set cpoptions+=$
 
 filetype plugin on
-filetype indent on
+filetype indent off
 filetype on
 
 set wm=2
@@ -41,6 +41,7 @@ set smartcase
 
 set linebreak
 
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
@@ -66,7 +67,7 @@ set wildignore=*.o,*.obj,*~,*.swp,*/node_modules/*
 set list
 set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
-set formatoptions-=o
+set formatoptions=cjloq
 
 set scrolloff=3
 set sidescrolloff=7

@@ -53,6 +53,9 @@ fi
 if [ ! -s ~/.vim/config ]; then
   ln -s $dotfiles_root/vim/config ~/.vim/config
 fi
+if [ ! -s ~/.vim/after ]; then
+  ln -s $dotfiles_root/vim/after ~/.vim/after
+fi
 
 if [ -d ~/Programming/swift/utils/vim -a ! -s $vim_path/swift ]; then
   ln -s ~/Programming/swift/utils/vim $vim_path/swift
