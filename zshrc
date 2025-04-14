@@ -9,3 +9,8 @@ fi
 
 export EDITOR="vim"
 
+if [ -n "${TERM_PROGRAM}" -a "${TERM_PROGRAM}" = 'tmux' ]; then
+  bindkey -e
+  bindkey -v
+  bindkey '^R' history-incremental-search-backward
+fi
