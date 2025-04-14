@@ -57,6 +57,19 @@ if [ ! -s ~/.vim/after ]; then
   ln -s $dotfiles_root/vim/after ~/.vim/after
 fi
 
+mkdir -p ~/.config/nvim
+if [ ! -s ~/.config/nvim/init.vim ]; then
+  ln -s $dotfiles_root/vimrc ~/.config/nvim/init.vim
+fi
+for f in $(ls $dotfiles_root/vim); do
+  if [ ! -s ~/.config/nvim/$f ]; then
+    ln -s $dotfiles_root/vim/$f ~/.config/nvim/$f
+  fi
+done
+if [ ! -s ~/.config/nvim/pack ]; then
+  ln -s ~/.vim/pack ~/.config/nvim/pack
+fi
+
 if [ -d ~/Programming/swift/utils/vim -a ! -s $vim_path/swift ]; then
   ln -s ~/Programming/swift/utils/vim $vim_path/swift
 fi
