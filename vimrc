@@ -91,4 +91,5 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set re=0
 
 source ~/.vim/config/keybindings.vim
+source ~/.vim/config/copilot.vim
 

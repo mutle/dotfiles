@@ -69,3 +69,4 @@ vim -u NONE -c "helptags vim-airline/doc" -c q
 
 vimclone "ctrlpvim/ctrlp.vim"
 vimclone "preservim/nerdtree"
+vimclone "github/copilot.vim"
