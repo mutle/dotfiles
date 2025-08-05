@@ -56,6 +56,9 @@ fi
 if [ ! -s ~/.vim/after ]; then
   ln -s $dotfiles_root/vim/after ~/.vim/after
 fi
+if [ ! -s ~/.vim/copilot-chat ]; then
+  ln -s $dotfiles_root/vim/copilot-chat ~/.vim/copilot-chat
+fi
 
 mkdir -p ~/.config/nvim
 if [ ! -s ~/.config/nvim/init.vim ]; then
@@ -83,3 +86,4 @@ vim -u NONE -c "helptags vim-airline/doc" -c q
 vimclone "ctrlpvim/ctrlp.vim"
 vimclone "preservim/nerdtree"
 vimclone "github/copilot.vim"
+vimclone "DanBradbury/copilot-chat.vim"

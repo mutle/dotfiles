@@ -1,0 +1,8 @@
+{
+  "model": "gpt-4",
+  "prompts": {
+    "explain": "Explain how this code works in detail:",
+    "refactor": "Suggest improvements and refactoring for this code:",
+    "docs": "Generate documentation for this code:"
+  }
+}
